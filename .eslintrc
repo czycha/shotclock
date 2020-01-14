@@ -1,0 +1,38 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "security",
+    "unicorn",
+    "simple-import-sort",
+    "jest"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-dupe-class-members": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-object-literal-type-assertion": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "camelcase": 0,
+    "simple-import-sort/sort": "error",
+    "unicorn/prevent-abbreviations": 0,
+    "unicorn/no-nested-ternary": 0,
+    "unicorn/import-index": 0,
+    "security/detect-object-injection": 0
+  }
+}
