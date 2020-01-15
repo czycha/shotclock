@@ -13,24 +13,28 @@ export const scoreboard: Scoreboard = {
       {
         scope: 'local',
         team: 'home',
-        display: 'Fox Sports North'
+        display: 'Fox Sports North',
+        language: 'English'
       },
       {
         scope: 'local',
         team: 'visitor',
-        display: 'Fox Sports Indiana'
+        display: 'Fox Sports Indiana',
+        language: 'English'
       }
     ],
     radio: [
       {
         scope: 'local',
         team: 'home',
-        display: '830 WCCO'
+        display: '830 WCCO',
+        language: 'English'
       },
       {
         scope: 'local',
         team: 'visitor',
-        display: '1070 The Fan/107.5 FM'
+        display: '1070 The Fan/107.5 FM',
+        language: 'English'
       }
     ]
   },

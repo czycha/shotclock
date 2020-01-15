@@ -29,12 +29,14 @@ export const scoreboard: Scoreboard = {
   broadcasters: {
     tv: [{
       scope: 'natl',
-      team: 'home',
-      display: 'NBA TV'
+      team: 'none',
+      display: 'NBA TV',
+      language: 'English'
     }, {
       scope: 'local',
       team: 'home',
-      display: 'Fox Sports GO (Minnesota)'
+      display: 'Fox Sports GO (Minnesota)',
+      language: 'English'
     }],
     radio: []
   }

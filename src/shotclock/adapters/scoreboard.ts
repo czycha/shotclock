@@ -17,12 +17,17 @@ function toTeam (t: LeagueScoreboardGameTeam): Team {
 function toBroadcasters (b: LeagueScoreboardGameBroadcaster[]): Broadcasters {
   const ret: Broadcasters = { tv: [], radio: [] }
   for (const bee of b) {
-    if (bee.scope !== 'natl' && bee.scope !== 'home' && bee.scope !== 'away' && bee.type !== 'tv' && bee.type !== 'radio' && bee.lan !== 'English') {
+    if ((bee.scope !== 'natl' && bee.scope !== 'home' && bee.scope !== 'away') || (bee.type !== 'tv' && bee.type !== 'radio')) {
       continue
     }
     const broadcaster: Broadcaster = {
-      scope: bee.scope === 'natl' ? 'natl' : 'local',
-      team: bee.scope === 'away' ? 'visitor' : 'home',
+      scope: bee.scope === 'away' || bee.scope === 'home' ? 'local' : bee.scope,
+      team: bee.scope === 'away'
+        ? 'visitor'
+        : bee.scope === 'home'
+          ? 'home'
+          : 'none',
+      language: bee.lan,
       display: bee.disp
     }
     ret[bee.type].push(broadcaster)

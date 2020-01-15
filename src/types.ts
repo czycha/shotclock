@@ -24,9 +24,10 @@ export type Team = {
 };
 
 export type Broadcaster = {
-  scope: 'local' | 'natl';
-  team: 'home' | 'visitor';
+  scope: 'local' | 'natl' | string;
+  team: 'home' | 'visitor' | 'none';
   display: string;
+  language: string;
 };
 
 export type Broadcasters = {
