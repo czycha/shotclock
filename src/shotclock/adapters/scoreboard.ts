@@ -17,7 +17,7 @@ function toTeam (t: LeagueScoreboardGameTeam): Team {
 function toBroadcasters (b: LeagueScoreboardGameBroadcaster[]): Broadcasters {
   const ret: Broadcasters = { tv: [], radio: [] }
   for (const bee of b) {
-    if ((bee.scope !== 'natl' && bee.scope !== 'home' && bee.scope !== 'away') || (bee.type !== 'tv' && bee.type !== 'radio')) {
+    if (bee.type !== 'tv' && bee.type !== 'radio') {
       continue
     }
     const broadcaster: Broadcaster = {
