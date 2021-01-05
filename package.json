@@ -26,7 +26,7 @@
     "watch": "npm run build -- --watch"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "fast-deep-equal": "^2.0.1",
     "just-compact": "^2.1.0",
     "luxon": "^1.6.2",
